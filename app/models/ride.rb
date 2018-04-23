@@ -9,6 +9,7 @@ class Ride < ActiveRecord::Base
 
     if error.compact.empty?
       update_user
+      "Thanks for riding the #{attraction.name}!"
     else
       "Sorry. " + error.compact.join(" ")
     end
